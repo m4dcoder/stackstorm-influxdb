@@ -1,0 +1,27 @@
+---
+name: write_points
+runner_type: run-python
+description: Write data points to the influxdb.
+enabled: true
+entry_point: write_points.py
+parameters:
+    database:
+        type: string
+        description: Name of the database. Database will be created if it does not exist.
+        required: true
+    data:
+        type: array
+        minItems: 1
+        items:
+            type: object
+            properties:
+                measurement:
+                    type: string
+                tags:
+                    type: object
+                time:
+                    type: string
+                fields:
+                    type: object
+        description: List of data points.
+        required: true

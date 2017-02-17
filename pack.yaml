@@ -1,0 +1,10 @@
+---
+ref: influxdb
+name : influxdb
+description : st2 content pack for accessing influxdb
+keywords:
+  - database
+  - influxdb
+version : 0.1.0
+author : StackStorm, Inc.
+email : info@stackstorm.com
